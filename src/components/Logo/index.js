@@ -1,8 +1,8 @@
 import React from "react";
+import { LogoSVG } from "./styles";
 
 export const Logo = () => (
-  <svg
-    class="_2m4hn"
+  <LogoSVG
     version="1.1"
     viewBox="0 0 32 32"
     width="32"
@@ -12,5 +12,5 @@ export const Logo = () => (
   >
     <title id="unsplash-home">Unsplash Home</title>
     <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z" />
-  </svg>
+  </LogoSVG>
 );
