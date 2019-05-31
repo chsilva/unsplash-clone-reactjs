@@ -10,17 +10,12 @@ const Main = ({ menus, session }) => {
   return (
     <>
       <Header />
-      <div className="container flex-column">
-        {/* <TopBar /> */}
-        <Routes menus={menus} session={session} />
-      </div>
+      {/* <TopBar /> */}
+      <Routes menus={menus} session={session} />
     </>
   );
 };
 
-const mapStateToProps = state => ({
-  menus: state.menus,
-  session: state.session
-});
+const mapStateToProps = state => ({});
 
 export default withRouter(connect(mapStateToProps)(Main));
