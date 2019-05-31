@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
+  background: #fff;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
