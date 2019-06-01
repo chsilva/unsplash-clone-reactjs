@@ -4,7 +4,8 @@ import {
   faBell,
   faSpinner,
   faHeart,
-  faPlus
+  faPlus,
+  faArrowDown
 } from "@fortawesome/free-solid-svg-icons";
 
 import { SpinnerWrap } from "./styles";
@@ -30,4 +31,8 @@ export const Heart = props => (
 
 export const Plus = props => (
   <FontAwesomeIcon icon={faPlus} className={`${props.customClass}`} />
+);
+
+export const ArrowDown = props => (
+  <FontAwesomeIcon icon={faArrowDown} className={`${props.customClass}`} />
 );

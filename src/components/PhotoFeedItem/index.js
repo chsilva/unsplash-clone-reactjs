@@ -1,8 +1,18 @@
 import React from "react";
 import AddCollectionButton from "../AddCollectionButton";
+import DownloadButton from "../DownloadButton";
 import LikeButton from "../LikeButton";
 import { Heart, Plus } from "../Icons";
-import { Item, ItemHiddenImg, ItemOverlay, ItemTopButtons } from "./styles";
+import {
+  Item,
+  ItemHiddenImg,
+  ItemOverlay,
+  ItemTopButtons,
+  ItemBottomContainer,
+  ItemUser,
+  ItemUserProfilePicture,
+  ItemUserProfileName
+} from "./styles";
 
 const PhotoFeedItem = props => {
   return (
@@ -27,8 +37,18 @@ const PhotoFeedItem = props => {
         </ItemTopButtons>
         <ItemHiddenImg
           src={props.photo.urls.regular}
-          alt="unsplash https://unsplash.com"
+          alt={props.photo.alt_description}
         />
+        <ItemBottomContainer>
+          <ItemUser>
+            <ItemUserProfilePicture
+              src={props.photo.user.profile_image.medium}
+              alt={props.photo.alt_description}
+            />
+            <ItemUserProfileName>{props.photo.user.name}</ItemUserProfileName>
+          </ItemUser>
+          <DownloadButton download={props.photo.links.download} />
+        </ItemBottomContainer>
       </ItemOverlay>
     </Item>
   );

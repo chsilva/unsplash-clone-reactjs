@@ -9,6 +9,7 @@ export const Item = styled.div`
 export const ItemHiddenImg = styled.img`
   width: 100%;
   visibility: hidden;
+  margin-top: -52px; /* TODO: fix this */
 `;
 
 export const ItemOverlay = styled.div`
@@ -24,6 +25,11 @@ export const ItemOverlay = styled.div`
     background: rgba(0, 0, 0, 0.3);
     opacity: 1;
   }
+  :active {
+    cursor: zoom-in;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 1;
+  }
 `;
 
 export const ItemTopButtons = styled.div`
@@ -33,4 +39,33 @@ export const ItemTopButtons = styled.div`
   justify-content: space-evenly;
   align-items: center;
   align-self: flex-end;
+`;
+
+export const ItemBottomContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: 52px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -52px; /* TODO: fix this */
+`;
+
+export const ItemUser = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+export const ItemUserProfilePicture = styled.img`
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  margin-left: 16px;
+`;
+export const ItemUserProfileName = styled.span`
+  display: flex;
+  align-self: center;
+  margin-left: 16px;
+  text-align: left;
+  color: #eee;
+  font-weight: 800;
 `;
