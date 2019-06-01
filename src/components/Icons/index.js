@@ -1,6 +1,11 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBell, faSpinner } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBell,
+  faSpinner,
+  faHeart,
+  faPlus
+} from "@fortawesome/free-solid-svg-icons";
 
 import { SpinnerWrap } from "./styles";
 
@@ -17,4 +22,12 @@ export const Spinner = props => (
       spin
     />
   </SpinnerWrap>
+);
+
+export const Heart = props => (
+  <FontAwesomeIcon icon={faHeart} className={`${props.customClass}`} />
+);
+
+export const Plus = props => (
+  <FontAwesomeIcon icon={faPlus} className={`${props.customClass}`} />
 );
