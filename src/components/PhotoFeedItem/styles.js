@@ -39,6 +39,7 @@ export const ItemTopButtons = styled.div`
   justify-content: space-evenly;
   align-items: center;
   align-self: flex-end;
+  margin-right: 11px;
 `;
 
 export const ItemBottomContainer = styled.div`
