@@ -13,32 +13,13 @@ const Home = () => {
 
   const [state, setState] = useState(initialHomeState);
 
-  useEffect(() => {
-    const getPhotos = async () => {
-      const { data } = await HomeService.getPhotos({ page: state.page });
-      const { photos } = state.data;
-
-      setState({
-        data: { photos: photos.concat(data) },
-        page: 1,
-        loading: false,
-        hasMore: true
-      });
-    };
-
-    getPhotos();
-    // I had to disable this rule because the useEffect function
-    // was entering an infinite loop when I added the parameter
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  const loadMore = () => {
-    const nextPage = state.page + 1;
-    HomeService.getPhotos({ page: nextPage })
+  const loadPhotos = async () => {
+    const { page } = state;
+    await HomeService.getPhotos({ page })
       .then(({ data }) => {
         setState({
           data: { photos: state.data.photos.concat(data) },
-          page: state.page + 1,
+          page: page + 1,
           loading: false,
           hasMore: true
         });
@@ -48,7 +29,7 @@ const Home = () => {
 
   return (
     <PhotoFeed
-      loadMore={loadMore}
+      loadMore={loadPhotos}
       hasMore={state.hasMore}
       loader={<Spinner size="2x" key={0} />}
       threshold={1000}
