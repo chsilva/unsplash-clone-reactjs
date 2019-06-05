@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Spinner } from "../../components/Icons";
 import HomeService from "../../services/home";
 import PhotoFeed from "../../components/PhotoFeed";

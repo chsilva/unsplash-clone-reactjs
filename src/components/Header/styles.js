@@ -20,8 +20,13 @@ export const HeaderLogoWrap = styled.div`
   width: 72px;
 `;
 
-export const HeaderSearchInput = styled.input`
+export const HeaderSearchForm = styled.form`
+  display: flex;
   flex-grow: 1;
+`;
+
+export const HeaderSearchInput = styled.input`
+  width: 100%;
   border: 1px solid #eee;
   border-radius: 24px;
   transition: 0.35s;

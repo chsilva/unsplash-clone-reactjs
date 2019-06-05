@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import SearchService from "../../services/search";
 import { Logo } from "../Logo";
 import { Bell } from "../Icons";
 import {
   HeaderContainer,
   HeaderLogoWrap,
+  HeaderSearchForm,
   HeaderSearchInput,
   HeaderNav,
   HeaderUserInfo,
@@ -12,12 +14,35 @@ import {
 } from "./styles";
 
 const Header = () => {
+  const INITIAL_STATE = {
+    query: ""
+  };
+
+  const [state, setState] = useState(INITIAL_STATE);
+
+  const onChangeInput = e => {
+    setState({ query: e.target.value });
+  };
+
+  const onSubmitSearchForm = async e => {
+    e.preventDefault();
+    const query = state;
+    const { data } = await SearchService.search({ query });
+    return false;
+  };
+
   return (
     <HeaderContainer className="shadowed">
       <HeaderLogoWrap>
         <Logo />
       </HeaderLogoWrap>
-      <HeaderSearchInput type="text" placeholder="Search photos..." />
+      <HeaderSearchForm onSubmit={onSubmitSearchForm}>
+        <HeaderSearchInput
+          type="text"
+          placeholder="Search photos..."
+          onChange={onChangeInput}
+        />
+      </HeaderSearchForm>
       <HeaderNav>
         <Link to="/">Home</Link>
         <Link to="/collections">Collections</Link>
