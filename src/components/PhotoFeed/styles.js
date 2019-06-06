@@ -10,7 +10,6 @@ export const Container = styled.div`
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 5px;
-  padding-top: 60px;
 `;
 
 export const Column = styled.div`

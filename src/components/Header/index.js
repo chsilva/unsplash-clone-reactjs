@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import SearchService from "../../services/search";
+import { setSearchUrlFriendly, onlyAlphanumericAndSpace } from "../Utils";
 import { Logo } from "../Logo";
 import { Bell } from "../Icons";
 import {
@@ -21,14 +21,14 @@ const Header = () => {
   const [state, setState] = useState(INITIAL_STATE);
 
   const onChangeInput = e => {
-    setState({ query: e.target.value });
+    const query = onlyAlphanumericAndSpace(e.target.value);
+    setState({ query });
   };
 
-  const onSubmitSearchForm = async e => {
+  const onSubmitSearchForm = e => {
     e.preventDefault();
-    const query = state;
-    const { data } = await SearchService.search({ query });
-    return false;
+    const { query } = state;
+    window.location.href = `/search/photos/${setSearchUrlFriendly(query)}`;
   };
 
   return (
@@ -41,6 +41,7 @@ const Header = () => {
           type="text"
           placeholder="Search photos..."
           onChange={onChangeInput}
+          value={state.query}
         />
       </HeaderSearchForm>
       <HeaderNav>

@@ -28,6 +28,7 @@ const PhotoFeed = props => {
         hasMore={props.hasMore}
         loader={<Spinner size="2x" key={0} />}
         threshold={props.threshold}
+        className={props.classname}
       >
         <Container>{row}</Container>
       </InfiniteScroll>

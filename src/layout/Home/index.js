@@ -34,6 +34,7 @@ const Home = () => {
       loader={<Spinner size="2x" key={0} />}
       threshold={1000}
       photos={state.data.photos}
+      classname="main"
     />
   );
 };
