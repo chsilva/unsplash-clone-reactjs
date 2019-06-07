@@ -10,7 +10,6 @@ const Main = ({ menus, session }) => {
   return (
     <>
       <Header />
-      {/* <TopBar /> */}
       <Routes menus={menus} session={session} />
     </>
   );
