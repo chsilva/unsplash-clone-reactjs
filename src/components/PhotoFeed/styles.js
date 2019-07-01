@@ -16,7 +16,7 @@ export const Column = styled.div`
   -ms-flex: 25%; /* IE10 */
   flex: 25%;
   max-width: 25%;
-  padding: 0 5px;
+  padding: 0 10px;
 
   @media (max-width: 1024px) {
     -ms-flex: 50%;
