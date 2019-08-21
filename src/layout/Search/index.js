@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import SearchPhotos from "../../components/Search/Photos";
-import SearchCollections from "../../components/Search/Collections";
-import SearchUsers from "../../components/Search/Users";
+import React from "react"
+import { Link } from "react-router-dom"
+import SearchPhotos from "../../components/Search/Photos"
+import SearchCollections from "../../components/Search/Collections"
+import SearchUsers from "../../components/Search/Users"
 import {
   Container,
   SearchQuery,
@@ -10,24 +10,24 @@ import {
   SearchNav,
   SearchNavLink,
   SearchNavType,
-  SearchNavCount
-} from "./styles";
+  SearchNavCount,
+} from "./styles"
 
 const Search = props => {
-  const { type, query } = props.match.params;
+  const { type, query } = props.match.params
 
   const getPage = () => {
     switch (type) {
       case "photos":
-        return <SearchPhotos />;
+        return <SearchPhotos query={query} />
       case "collections":
-        return <SearchCollections />;
+        return <SearchCollections query={query} />
       case "users":
-        return <SearchUsers />;
+        return <SearchUsers query={query} />
       default:
-        return <div style={{ paddingTop: `100px` }}>BUSCA INCORRETA</div>;
+        return <div style={{ paddingTop: `100px` }}>BUSCA INCORRETA</div>
     }
-  };
+  }
 
   return (
     <Container>
@@ -55,9 +55,9 @@ const Search = props => {
           </SearchNavLink>
         </Link>
       </SearchNav>
-      {/* <SearchFeed>{getPage()}</SearchFeed> */}
+      <div>{getPage()}</div>
     </Container>
-  );
-};
+  )
+}
 
-export default Search;
+export default Search

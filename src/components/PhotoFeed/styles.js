@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const Container = styled.div`
   display: -ms-flexbox; /* IE10 */
@@ -10,7 +10,7 @@ export const Container = styled.div`
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 5px;
-`;
+`
 
 export const Column = styled.div`
   -ms-flex: 25%; /* IE10 */
@@ -29,4 +29,4 @@ export const Column = styled.div`
     flex: 100%;
     max-width: 100%;
   }
-`;
+`

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const HeaderContainer = styled.div`
   background: #fff;
@@ -11,19 +11,19 @@ export const HeaderContainer = styled.div`
   position: fixed;
   width: 100%;
   z-index: 1;
-`;
+`
 
 export const HeaderLogoWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 72px;
-`;
+`
 
 export const HeaderSearchForm = styled.form`
   display: flex;
   flex-grow: 1;
-`;
+`
 
 export const HeaderSearchInput = styled.input`
   width: 100%;
@@ -36,16 +36,16 @@ export const HeaderSearchInput = styled.input`
   background-position-x: 12px;
   padding-left: 40px;
   :hover {
-    border: 1px solid #999;
+    border: 1px solid #ccc;
   }
   :focus {
-    border: 1px solid #999;
+    border: 1px solid #ccc;
     background-color: #fff;
   }
   ::placeholder {
     color: #999;
   }
-`;
+`
 
 export const HeaderNav = styled.div`
   display: flex;
@@ -54,7 +54,7 @@ export const HeaderNav = styled.div`
   align-items: center;
   width: 200px;
   font-size: 1.1em;
-`;
+`
 
 export const HeaderUserInfo = styled.div`
   display: flex;
@@ -62,11 +62,11 @@ export const HeaderUserInfo = styled.div`
   justify-content: space-evenly;
   align-items: center;
   width: 120px;
-`;
+`
 
 export const HeaderAvatar = styled.img`
   border-radius: 16px;
   :hover {
     cursor: pointer;
   }
-`;
+`
