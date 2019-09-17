@@ -1,3 +1,6 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d08e1e9ad8554faea32cbc78b0723d83)](https://www.codacy.com/manual/caio_7/unsplash-clone-reactjs?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=caiohenriquesilva/unsplash-clone-reactjs&amp;utm_campaign=Badge_Grade)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/24f44e35-3c1d-40d7-8312-fff23b3ada57/deploy-status)](https://app.netlify.com/sites/unsplash-react-clone-caiohenriquesilva/deploys)
+
 [DEMO](https://unsplash-react-clone-caiohenriquesilva.netlify.com/)
 
 This project is a https://unsplash.com clone powered by their API
