@@ -1,26 +1,17 @@
-import React, { useState } from "react";
-import InfiniteScroll from "react-infinite-scroller";
-import { Spinner } from "../Icons";
-import { Container, Column } from "./styles";
+import React, { useState } from "react"
+import InfiniteScroll from "react-infinite-scroller"
+import { Spinner } from "../Icons"
+import { Container } from "./styles"
 
-import PhotoFeedItem from "../PhotoFeedItem";
+import PhotoFeedItem from "../PhotoFeedItem"
 
 const PhotoFeed = props => {
-  const [state] = useState({ ...props });
+  const [state] = useState({ ...props })
 
   if (!state.loading) {
-    let row = [];
-    const columns = [[], [], [], []];
+    let row = []
 
-    props.photos.forEach((photo, i) => {
-      columns[i % 4].push(
-        <PhotoFeedItem key={i} alt="placeholder" photo={photo} />
-      );
-    });
-
-    row = columns.map((column, i) => (
-      <Column key={i}>{column.map(item => item)}</Column>
-    ));
+    row = props.photos.map((photo, i) => <PhotoFeedItem key={i} alt="placeholder" photo={photo} />)
 
     return (
       <InfiniteScroll
@@ -32,7 +23,7 @@ const PhotoFeed = props => {
       >
         <Container>{row}</Container>
       </InfiniteScroll>
-    );
+    )
   } else {
     return (
       <>
@@ -40,8 +31,8 @@ const PhotoFeed = props => {
           <Spinner size="2x" />
         </Container>
       </>
-    );
+    )
   }
-};
+}
 
-export default PhotoFeed;
+export default PhotoFeed

@@ -1,15 +1,26 @@
 import styled from "styled-components"
 
-export const Item = styled.div`
-  margin-top: 20px;
-  vertical-align: middle;
-  width: 100%;
-`
+export const Item = styled.figure`
+  height: auto;
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 10px;
+  @media (max-width: 1024px) {
+    flex: 50%;
+    max-width: 50%;
+  }
+  @media (max-width: 600px) {
+    flex: 100%;
+    max-width: 100%;
+  }
 
-export const ItemHiddenImg = styled.img`
-  width: 100%;
-  visibility: hidden;
-  margin-top: -52px; /* TODO: fix this */
+  img {
+    height: auto;
+    transition: all 0.15s;
+    &:hover {
+      filter: brightness(50%);
+    }
+  }
 `
 
 export const ItemOverlay = styled.div`
