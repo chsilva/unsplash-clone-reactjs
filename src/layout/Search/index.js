@@ -25,7 +25,7 @@ const Search = (props) => {
       case "users":
         return <SearchUsers query={query} />
       default:
-        return <div style={{ paddingTop: `100px` }}>BUSCA INCORRETA</div>
+        return <div style={{ paddingTop: "100px" }}>BUSCA INCORRETA</div>
     }
   }
 
