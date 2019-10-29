@@ -3,10 +3,10 @@
 
 [DEMO](https://unsplash-react-clone-caiohenriquesilva.netlify.com/)
 
-This project is a https://unsplash.com clone powered by their API
+This project is a [UNSPLASH](https://unsplash.com) clone powered by their API
 
 ## How to run
-First of all you need to create an app and API_KEY in https://unsplash.com/developers<br>
+First of all you need to create an app and API_KEY at [UNSPLASH DEVELOPERS PANEL](https://unsplash.com/developers)<br>
 Create a file named .env in the root directory with the following:<br>
 REACT_APP_UNSPLASH_CLIENT_ID=%YOUR_API_KEY%
 
