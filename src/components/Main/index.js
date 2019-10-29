@@ -1,10 +1,10 @@
-import React from "react";
-import { withRouter } from "react-router-dom";
-import { connect } from "react-redux";
+import React from "react"
+import { withRouter } from "react-router-dom"
+import { connect } from "react-redux"
 
-import Header from "../Header";
+import Header from "../Header"
 
-import Routes from "../Routes";
+import Routes from "../Routes"
 
 const Main = ({ menus, session }) => {
   return (
@@ -12,9 +12,9 @@ const Main = ({ menus, session }) => {
       <Header />
       <Routes menus={menus} session={session} />
     </>
-  );
-};
+  )
+}
 
-const mapStateToProps = state => ({});
+const mapStateToProps = (state) => ({})
 
-export default withRouter(connect(mapStateToProps)(Main));
+export default withRouter(connect(mapStateToProps)(Main))

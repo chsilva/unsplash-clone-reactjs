@@ -1,19 +1,19 @@
-import React from "react";
-import Button from "../Button";
+import React from "react"
+import Button from "../Button"
 
-const AddCollectionButton = props => {
+const AddCollectionButton = (props) => {
   return (
     <Button
       customStyle={{
         width: "80px",
         justifyContent: "space-evenly",
         alignItems: "center",
-        display: "flex"
+        display: "flex",
       }}
     >
       {props.children}
     </Button>
-  );
-};
+  )
+}
 
-export default AddCollectionButton;
+export default AddCollectionButton

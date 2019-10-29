@@ -13,7 +13,7 @@ import {
   SearchNavCount,
 } from "./styles"
 
-const Search = props => {
+const Search = (props) => {
   const { type, query } = props.match.params
 
   const getPage = () => {

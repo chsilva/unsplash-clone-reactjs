@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { setSearchUrlFriendly, onlyAlphanumericAndSpace } from "../Utils";
-import { Logo } from "../Logo";
-import { Bell } from "../Icons";
+import React, { useState } from "react"
+import { Link } from "react-router-dom"
+import { setSearchUrlFriendly, onlyAlphanumericAndSpace } from "../Utils"
+import { Logo } from "../Logo"
+import { Bell } from "../Icons"
 import {
   HeaderContainer,
   HeaderLogoWrap,
@@ -10,26 +10,26 @@ import {
   HeaderSearchInput,
   HeaderNav,
   HeaderUserInfo,
-  HeaderAvatar
-} from "./styles";
+  HeaderAvatar,
+} from "./styles"
 
 const Header = () => {
   const INITIAL_STATE = {
-    query: ""
-  };
+    query: "",
+  }
 
-  const [state, setState] = useState(INITIAL_STATE);
+  const [state, setState] = useState(INITIAL_STATE)
 
-  const onChangeInput = e => {
-    const query = onlyAlphanumericAndSpace(e.target.value);
-    setState({ query });
-  };
+  const onChangeInput = (e) => {
+    const query = onlyAlphanumericAndSpace(e.target.value)
+    setState({ query })
+  }
 
-  const onSubmitSearchForm = e => {
-    e.preventDefault();
-    const { query } = state;
-    window.location.href = `/search/photos/${setSearchUrlFriendly(query)}`;
-  };
+  const onSubmitSearchForm = (e) => {
+    e.preventDefault()
+    const { query } = state
+    window.location.href = `/search/photos/${setSearchUrlFriendly(query)}`
+  }
 
   return (
     <HeaderContainer className="shadowed">
@@ -37,12 +37,7 @@ const Header = () => {
         <Logo />
       </HeaderLogoWrap>
       <HeaderSearchForm onSubmit={onSubmitSearchForm}>
-        <HeaderSearchInput
-          type="text"
-          placeholder="Search photos..."
-          onChange={onChangeInput}
-          value={state.query}
-        />
+        <HeaderSearchInput type="text" placeholder="Search photos..." onChange={onChangeInput} value={state.query} />
       </HeaderSearchForm>
       <HeaderNav>
         <Link to="/">Home</Link>
@@ -56,7 +51,7 @@ const Header = () => {
         />
       </HeaderUserInfo>
     </HeaderContainer>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

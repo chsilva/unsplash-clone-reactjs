@@ -1,23 +1,17 @@
 import styled from "styled-components"
 
 export const Item = styled.figure`
-  height: auto;
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 10px;
-  @media (max-width: 1024px) {
-    flex: 50%;
-    max-width: 50%;
-  }
-  @media (max-width: 600px) {
-    flex: 100%;
-    max-width: 100%;
-  }
+  width: 100%;
+  margin-bottom: 18px;
 
   img {
+    width: 100%;
     height: auto;
     transition: all 0.15s;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     &:hover {
+      cursor: zoom-in;
       filter: brightness(50%);
     }
   }

@@ -13,10 +13,10 @@ import {
   ItemUserProfileName,
 } from "./styles"
 
-const PhotoFeedItem = props => {
+const PhotoFeedItem = (props) => {
   return (
     <Item {...props}>
-      <img src={props.photo.urls.small} alt="" />
+      <img loading="lazy" src={props.photo.urls.regular} alt="" />
       {/* <ItemTopButtons>
         <LikeButton>
           <Heart customClass="red" />
