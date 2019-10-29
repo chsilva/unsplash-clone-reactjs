@@ -16,8 +16,7 @@ import {
 const PhotoFeedItem = (props) => {
   return (
     <Item {...props}>
-      <img loading="lazy" src={props.photo.urls.regular} alt="" />
-      {/* <ItemTopButtons>
+      <ItemTopButtons>
         <LikeButton>
           <Heart customClass="red" />
           <span>{props.photo.likes}</span>
@@ -34,7 +33,8 @@ const PhotoFeedItem = (props) => {
           <ItemUserProfileName>{props.photo.user.name}</ItemUserProfileName>
         </ItemUser>
         <DownloadButton download={props.photo.links.download} />
-      </ItemBottomContainer> */}
+      </ItemBottomContainer>
+      <img loading="lazy" src={props.photo.urls.regular} alt="" />
     </Item>
   )
 }

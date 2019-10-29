@@ -3,57 +3,51 @@ import styled from "styled-components"
 export const Item = styled.figure`
   width: 100%;
   margin-bottom: 18px;
+  position: relative;
 
-  img {
+  > img {
     width: 100%;
     height: auto;
-    transition: all 0.15s;
+    transition: all 0.1s;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    &:hover {
+  }
+  &:hover {
+    img {
       cursor: zoom-in;
-      filter: brightness(50%);
+      filter: brightness(80%);
+    }
+
+    div {
+      display: flex;
     }
   }
 `
 
-export const ItemOverlay = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  transition: 0.25s;
-  background: rgba(0, 0, 0, 0);
-  opacity: 0;
-  :hover {
-    cursor: zoom-in;
-    background: rgba(0, 0, 0, 0.3);
-    opacity: 1;
-  }
-  :active {
-    cursor: zoom-in;
-    background: rgba(0, 0, 0, 0.3);
-    opacity: 1;
-  }
-`
-
 export const ItemTopButtons = styled.div`
-  display: flex;
+  display: none;
   min-width: 155px;
   height: 52px;
   justify-content: space-evenly;
   align-items: center;
   align-self: flex-end;
   margin-right: 11px;
+  position: absolute;
+  z-index: 9;
+  right: 0;
 `
 
 export const ItemBottomContainer = styled.div`
-  display: flex;
-  flex-direction: row;
   height: 52px;
+  width: 100%;
+  display: none;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-top: -52px; /* TODO: fix this */
+  position: absolute;
+  z-index: 9;
+  bottom: 0;
+  margin-bottom: 5px;
 `
 
 export const ItemUser = styled.div`
